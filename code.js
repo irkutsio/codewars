@@ -112,17 +112,64 @@
 // console.log(getGrade(95, 90, 93));
 
 // ******************************
-function paperwork(n, m) {
-	if (n < 0 || m < 0) {
-		return 0;
-	} else {
-		return n * m;
-	}
-}
-console.log(paperwork(-5, 5))
-console.log(paperwork(-5, -5))
-console.log(paperwork(5, 5))
+// function paperwork(n, m) {
+// 	if (n < 0 || m < 0) {
+// 		return 0;
+// 	} else {
+// 		return n * m;
+// 	}
+// }
+// console.log(paperwork(-5, 5))
+// console.log(paperwork(-5, -5))
+// console.log(paperwork(5, 5))
 
-function greet (name, owner) {
-    return name === owner ? 'Hello boss' : 'Hello guest';
-  }
+// function greet (name, owner) {
+//     return name === owner ? 'Hello boss' : 'Hello guest';
+//   }
+
+// *88************************
+
+// var min = function (list) {
+// 	list.sort((a, b) => a - b);
+// 	return list[0];
+// };
+
+// var max = function (list) {
+// 	list.sort((a, b) => b - a);
+// 	return list[0];
+// };
+// console.log(max([4,6,2,1,9,63,-134,566]))
+// min([-52, 56, 30, 29, -54, 0, -110]);
+// min([42, 54, 65, 87, 0]), 0;
+
+//*********************** */
+
+// class SmallestIntegerFinder {
+//     findSmallestInt(args) {
+//       return Math.min(...args)
+//     }
+//   }
+
+//   const finder = new SmallestIntegerFinder();
+// console.log(finder.findSmallestInt([1,5,3,7,5,0]))
+
+// function getSum(a, b) {
+// 	let sum = 0;
+// 	if (a < b) {
+// 		for (let i = a; i <= b; i++) {
+// 			sum += i;
+// 		}
+// 		return sum;
+// 	}else if (a > b){
+// 		for (let i = a; i >= b; i--) {
+// 			sum+=i
+//            }
+// 		return sum;
+// } else {
+//     return a;
+// }
+// }
+// // 
+// console.log(getSum(0, 8));
+// console.log(getSum(0, -8));
+// console.log(getSum(2,2));
