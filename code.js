@@ -169,7 +169,16 @@
 //     return a;
 // }
 // }
-// // 
+// //
 // console.log(getSum(0, 8));
 // console.log(getSum(0, -8));
 // console.log(getSum(2,2));
+
+// *************************
+
+// function nthEven(n) {
+// 	return n * 2 - 2; // или так 
+// 	return (n - 1) * 2;
+// }
+
+// найти n-ное четное число
