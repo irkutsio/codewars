@@ -177,8 +177,521 @@
 // *************************
 
 // function nthEven(n) {
-// 	return n * 2 - 2; // или так 
+// 	return n * 2 - 2; // или так
 // 	return (n - 1) * 2;
 // }
 
 // найти n-ное четное число
+
+// ****************************
+// function countSheeps(arrayOfSheep) {
+// 	let num = 0;
+// 	arrayOfSheep.forEach(item => {
+// 		if (item) {
+// 			num += 1;
+// 		}
+// 	});
+// 	return num;
+// }
+
+// console.log(countSheeps([true, true, true, true, false, false, true, true]));
+
+//&&&&&&&&&&&&&&&&&
+
+// function expressionMatter(a, b, c) {
+//     let arr = [];
+// 	let x = a * (b + c);
+// 	let x1 = a * b * c;
+// 	let x2 = a + b * c;
+// 	let x3 = (a + b) * c;
+//     let x4 = a + b + c;
+//     let x5 = (a * b) + c;
+//     arr.push(x,x1,x2,x3,x4,x5);
+//     console.log(arr)
+//     arr.sort((a,b) => b - a);
+//     return arr[0];
+
+// }
+
+// function expressionMatter(a, b, c) {
+// 	const variants = [a * b * c, a + b + c, a * (b + c), (a + b) * c, a + b * c, a * b + c];
+// console.log(...variants);
+// 	return Math.max(...variants);
+// }
+
+// function expressionMatter(a, b, c) {
+//     return Math.max(
+//       a + b + c,
+//       a * b * c,
+//       a * (b + c),
+//       (a + b) * c,
+//       a + b * c,
+//       a * b + c,
+//     );
+//   }
+
+// console.log(expressionMatter(9, 1, 1));
+
+// *********************
+// function makeUpperCase(str) {
+//     return str.toUpperCase();
+//   }
+
+//   console.log(makeUpperCase('qweqwe'))
+
+// ***********************
+// задача = функция возвращает s в количестве n(столько n => сколько s)
+// function repeatStr(n, s) {
+//     let str = '';
+// 	for(let i=1; i <=n; i++){
+//         str += s
+//     }
+//     return str;
+// }
+
+// есть функция репит --- function repeatStr (n, s) {
+//     return s.repeat(n);
+//   }
+// repeatStr(5, '#');
+// *********************************
+// найти самое короткое слово из строки
+// function findShort(s) {
+// 	const arr = s.split(' ');
+// 	let min = arr[0].length;
+// 	for (let i = 1; i < arr.length; i++) {
+// 		if (arr[i].length < min) {
+// 			min = arr[i].length;
+// 			return min;
+// 		}
+// 	}
+// }
+// console.log(findShort("Let's travel abroad shall we")); // 2
+// console.log(findShort('turns out random test cases are easier than writing out basic ones')); // 3
+// ************************************8
+// function check(a, x) {
+// return a.includes(x)
+// }
+// console.log(check([101, 45, 75, 105, 99, 107], 107));
+
+// ****************************
+// function abbrevName(name){
+// const arr = name.split(' ')
+// const newArr = arr[1][0] + '.' + arr[0][0]
+// }
+// abbrevName("Sam Harris")
+
+// ***************************
+// function litres(time) {
+// 	console.log(Math.floor(time * 0.5));
+// }
+
+// litres(1787); //893
+// litres(12.3); // 6
+// litres(1.4); //0
+// ****************************
+
+// function hero(bullets, dragons) {
+// 	return bullets / dragons >= 2 ? true : false;
+// }
+// console.log(hero(1500, 751));
+// hero(4, 5);
+// hero(7, 4);
+// console.log(hero(10, 5));
+
+// *************************************
+// function solution(str, ending){
+//     console.log(str[str.length-1])
+//     if(str[str.length-1] === ending[ending.length-1]) {
+//         return 'true'
+//     } else {
+//         return'false'
+//     }
+//   }
+
+//   solution('abcde', 'abc')// false
+//   solution('abcde', 'cde')// true
+
+// ****************************
+// function filter_list(l) {
+//     return l.filter((item) => {
+//       return typeof item === "number" && item >= 0; // добавляем проверку на >= 0
+//     });
+//   }
+
+// console.log(filter_list([1, 2, 0, 'aasf', '1', '123', 123]))
+// console.log(filter_list([1, 'a', 'b', 0, 15]));
+// filter_list([1, 2, 'a', 'b']);
+
+// **********************
+// ***********************ЗАПОМНИ!!!!!
+// function isIsogram(str) {
+// 	for (let i = 0; i < str.length - 1; i++) {
+// 		for (let j = i + 1; j < str.length; j++) {
+// 			if (str[i] === str[j]) {
+// 				return false;
+// 			}
+// 		}
+// 	}
+// 	return true;
+// }
+// console.log(isIsogram('Dermatoglyphics'));
+// isIsogram('Dermatoglyphics'); //, true );
+// isIsogram('isogram'); //, true );
+// isIsogram('aba'); //, false, "sa
+
+// **********************
+// function positiveSum(arr) {
+//     let sum = 0;
+// 	arr.filter(num => {
+// 		if (num > 0) {
+//            sum += num
+// 		}
+
+// 	});
+//     return sum;
+// }
+// positiveSum([-1, -2, -3, -4, -5]); //,0);
+// positiveSum([1, -2, 3, 4, 5]); //,13)
+// positiveSum([1, 2, 3, 4, 5]); //15
+
+// *************************
+// function maps(x) {
+// 	return x.map(num => num * 2);
+// }
+// console.log(maps([1, 4, 6]));
+
+// ****************************
+// function areYouPlayingBanjo(name) {
+//     if(name[0] === 'r' || name[0] === 'R') {
+//         return name + " plays banjo"
+//       }
+//       return name + " does not play banjo"
+//     }
+//     console.log(areYouPlayingBanjo("Rravo"))
+
+// function areYouPlayingBanjo(name) {
+// 	return name[0] === 'r' || name[0] === 'R' ? name + ' plays banjo' : name + ' does not play banjo';
+// }
+
+// *********************************
+// var number = function (busStops) {
+// 	let inside = 0;
+// 	let outside = 0;
+// 	busStops.flatMap(num => {
+// 		inside += num[0];
+// 		outside += num[1];
+// 	});
+//      return inside - outside
+// };
+// number([
+// 	[10, 0],
+// 	[3, 5],
+// 	[5, 8],
+// ]);
+//,5)
+// number([
+// 	[3, 0],
+// 	[9, 1],
+// 	[4, 8],
+// 	[12, 2],
+// 	[6, 1],
+// 	[7, 8],
+// ]); //,21)
+
+// ***********************************
+// function isTriangle(a, b, c) {
+// 	if (a + b > c && a + c > b && b + c > a) {
+//         return true
+// 	}
+//     return false
+// }
+// console.log(isTriangle(1,2,2))
+
+// *****************************
+// function rentalCarCost(d) {
+//     if(d < 3) {
+//         return d * 40
+//     } else if(d < 7) {
+//         return d * 40 - 20
+//     } else {
+//         return d * 40 - 50
+//     }
+//    }
+//    console.log(rentalCarCost(3))
+
+// **************************
+// function nbYear(p0, percent, aug, p) {
+//     let population = p0;
+//     let years = 0;
+//     while (population < p) {
+//       population += Math.floor(population * (percent / 100)) + aug;
+//       years++;
+//     }
+//     return years;
+//   }
+// nbYear(1500, 5, 100, 5000);
+// Test.assertEquals(nbYear(1500000, 2.5, 10000, 2000000), 10);
+// Test.assertEquals(nbYear(1500000, 0.25, 1000, 2000000), 94);
+
+//*************************** */
+
+// function binaryArrayToNumber(arr) {
+//     // Преобразуем массив в строку и затем в двоичное число
+//     const binaryStr = arr.join('');
+//     const binaryNum = parseInt(binaryStr, 2);
+//     // Возвращаем десятичное число
+//     return binaryNum;
+//   }
+// Test.assertEquals(binaryArrayToNumber([0,0,0,1]), 1);
+// Test.assertEquals(binaryArrayToNumber([0,0,1,0]), 2);
+// Test.assertEquals(binaryArrayToNumber([1,1,1,1]), 15);
+// Test.assertEquals(binaryArrayToNumber([0,1,1,0]), 6);
+
+// ********************************8
+// function removeExclamationMarks(s) {
+// 	return s.split('!').join('')
+// }
+// removeExclamationMarks('Hello World!');
+// console.log(removeExclamationMarks('Hello! World!'));
+
+// **************************
+// function noOdds(values) {
+// 	return values.filter(value => value % 2 === 0);
+// }
+// console.log(noOdds([0, 1, 2, 3]));
+
+// ****************************
+// function explode(x) {
+// 	let count = 0;
+// 	let arr = [];
+// 	if (typeof x[0] === 'number' && typeof x[1] === 'number') {
+// 		count = x[0] + x[1];
+// 	} else if (typeof x[0] === 'number') {
+// 		count = x[0];
+// 	} else if (typeof x[1] === 'number') {
+// 		count = x[1];
+// 	} else {
+// 		return 'Void!';
+// 	}
+// 	for (let i = 0; i < count; i++) {
+// 		arr.push(x);
+
+// 	}
+//     return arr;
+// }
+// console.log(explode([2, 3]));
+// explode(['a', 'b']);
+
+// *****************************
+// function longest(s1, s2) {
+// 	let str = s1 + s2;
+// 	// console.log(str);
+// 	for (let i = 0; i < str.length; i++) {
+// 		for (let j = i + 1; j <= str.length; i++) {
+// 			if (str[i] !== str[j]) {
+// 				return str[j];
+// 			}
+// 		}
+// 	}
+// }
+// console.log('hello');
+// longest('aretheyhere', 'yestheyarehere');
+// longest('loopingisfunbutdangerous', 'lessdangerousthancoding');
+// longest('inmanylanguages', 'theresapairoffunctions');
+
+// =====================================
+
+function countSheeps(arrayOfSheep) {
+	// let total = 0;
+	// for (let i = 0; i < arrayOfSheep.length; i++) {
+	// 	if (arrayOfSheep[i]) {
+	// 		total += arrayOfSheep[i];
+	// 	}
+	// }
+	// return total;
+	// ============================================
+	// return arrayOfSheep.filter(Boolean).length;
+}
+
+// console.log(
+// 	countSheeps([
+// 		true,     ............ответ 17
+// 		true,
+// 		true,
+// 		false,
+// 		true,
+// 		true,
+// 		true,
+// 		true,
+// 		true,
+// 		false,
+// 		true,
+// 		false,
+// 		true,
+// 		false,
+// 		false,
+// 		true,
+// 		true,
+// 		true,
+// 		true,
+// 		true,
+// 		false,
+// 		false,
+// 		true,
+// 		true,
+// 	])
+// );
+
+// ================================
+// function sumCubes(n){
+// 	let sum =0;
+// 	for (let i=1; i<=n; i++)
+// 	sum += i ** 3
+// console.log(sum)
+//   }
+
+//   sumCubes(2)
+
+// =======================================
+// function removeSmallest(numbers) {
+// 	const smallest = Math.min(...numbers);
+// 	let arr = [];
+// 	return (arr = numbers.filter((number, i) => i !== numbers.indexOf(smallest)));
+// }
+
+// function removeSmallest(numbers) {
+// 	let indexOfMin = numbers.indexOf(Math.min(...numbers));
+// 	return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+//   }
+// removeSmallest([1, 2, 3, 4, 5]); //, [2, 3, 4, 5],
+// // removeSmallest([5, 3, 2, 1, 4]); //, [5, 3, 2, 4],
+// removeSmallest([2, 2, 1, 2, 1]); //, [2, 2, 2, 1],
+// removeSmallest([]); //, [], "Wrong result for []");
+
+// ===================================================
+
+// function arrayPlusArray(arr1, arr2) {
+// 	const arr = arr1.concat(arr2);
+// 	const total = arr.reduce((acc, num) => {
+// 		return acc + num;
+// 	}, 0);
+// 	return total
+// }
+
+// console.log(arrayPlusArray([100, 200, 300], [400, 500, 600]));
+
+// var a = {};
+// (function b(a) {
+// 	a.a = 10;
+// 	a = null;
+// })(a);
+
+// console.log(a)
+
+///////////////////////////////////////
+// Sum Numbers
+// function sum(numbers) {
+// 	let total = 0;
+// 	for (let i = 0; i < numbers.length; i++) {
+// 		total += numbers[i];
+// 	}
+// 	return total
+// }
+// sum([1, 5.2, 4, 0, -1])
+
+// function countBy(x, n) {
+// 	let z = [];
+// 	for (let i = 1; i <= n; i++) {
+// 		z.push(i * x);
+// 	}
+// 	console.log(z)
+// 	return z;
+// }
+
+// countBy(2,5)
+
+// function reduce(fraction) {
+// 	fraction.sort((a, b) => a - b);
+
+// 	const a = fraction[1];
+// 	const b = fraction[0];
+// 	while (b !== 0) {
+//         const temp = b;
+//         b = a % b;
+//         a = temp;
+//     }
+//     return a;
+// }
+
+// =======================эвклыдова формула=================
+// function gcd(a, b) {
+//     while (b !== 0) {
+//         const temp = b;
+//         b = a % b;
+//         a = temp;
+//     }
+//     return a;
+// }
+
+// function reduce(fraction) {
+//     const a = fraction[0];
+//     const b = fraction[1];
+//     const greatestCommonDivisor = gcd(a, b);
+
+//     const reducedNumerator = a / greatestCommonDivisor;
+//     const reducedDenominator = b / greatestCommonDivisor;
+
+//     return [reducedNumerator, reducedDenominator];
+// }
+
+// const simplifiedFraction = reduce([45, 120]);
+// console.log(simplifiedFraction); // [3, 8]
+
+// reduce([45, 120]);
+// reduce([80, 120]);
+// reduce([60, 20]);
+
+// ===================================
+// const invert = array => {
+// 	let newArr = [];
+// 	for (let i = 0; i < array.length; i++) {
+// 		newArr.push(array[i] * -1);
+// 	}
+// 	return newArr;
+// };
+
+// invert([1, 2, 3, 4]);===
+// ==========================================
+
+// function smash(words) {
+// 	return words.join(' ');
+// }
+
+// console.log(smash(['hello', 'world', 'this', 'is', 'great']));
+//===============================================
+
+
+
+
+const findOdd = A => {
+	const groups = {};
+
+	for (const value of A) {
+		if (groups[value]) {
+			groups[value].push(value);
+		} else {
+			groups[value] = [value];
+		}
+	}
+	const arrays = Object.values(groups);
+	for (const arr of arrays) {
+		if (arr.length % 2 !== 0) {
+			console.log(arr[0]);
+			return arr[0];
+		}
+	}
+};
+
+findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5]);
+findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]);
+
