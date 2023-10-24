@@ -673,25 +673,49 @@ function countSheeps(arrayOfSheep) {
 
 
 
-const findOdd = A => {
-	const groups = {};
+// const findOdd = A => {
+// 	const groups = {};
 
-	for (const value of A) {
-		if (groups[value]) {
-			groups[value].push(value);
-		} else {
-			groups[value] = [value];
-		}
-	}
-	const arrays = Object.values(groups);
-	for (const arr of arrays) {
-		if (arr.length % 2 !== 0) {
-			console.log(arr[0]);
-			return arr[0];
-		}
-	}
-};
+// 	for (const value of A) {
+// 		if (groups[value]) {
+// 			groups[value].push(value);
+// 		} else {
+// 			groups[value] = [value];
+// 		}
+// 	}
+// 	const arrays = Object.values(groups);
+// 	for (const arr of arrays) {
+// 		if (arr.length % 2 !== 0) {
+// 			console.log(arr[0]);
+// 			return arr[0];
+// 		}
+// 	}
+// };
 
-findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5]);
-findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]);
+// findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5]);
+// findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]);
+
+
+
+// const [a, ,b] = 'JavaScript is awesome'.split(' ');
+// console.log(a, b);
+
+// const confused = 'no';
+// const myKey = confused;
+
+// const obj = {
+// [myKey]: false,
+// };
+
+// console.log(obj);
+
+// let value = 20;
+
+// if (true) {
+// console.log(value);
+// let value = 10;
+// }
+
+
+console.log(+'1000')
 
