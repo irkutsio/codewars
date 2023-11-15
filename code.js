@@ -670,52 +670,158 @@ function countSheeps(arrayOfSheep) {
 // console.log(smash(['hello', 'world', 'this', 'is', 'great']));
 //===============================================
 
+// // const findOdd = A => {
+// // 	const groups = {};
 
+// // 	for (const value of A) {
+// // 		if (groups[value]) {
+// // 			groups[value].push(value);
+// // 		} else {
+// // 			groups[value] = [value];
+// // 		}
+// // 	}
+// // 	const arrays = Object.values(groups);
+// // 	for (const arr of arrays) {
+// // 		if (arr.length % 2 !== 0) {
+// // 			console.log(arr[0]);
+// // 			return arr[0];
+// // 		}
+// // 	}
+// // };
 
+// // findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5]);
+// // findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]);
 
-// const findOdd = A => {
-// 	const groups = {};
+// // const [a, ,b] = 'JavaScript is awesome'.split(' ');
+// // console.log(a, b);
 
-// 	for (const value of A) {
-// 		if (groups[value]) {
-// 			groups[value].push(value);
-// 		} else {
-// 			groups[value] = [value];
-// 		}
-// 	}
-// 	const arrays = Object.values(groups);
-// 	for (const arr of arrays) {
-// 		if (arr.length % 2 !== 0) {
-// 			console.log(arr[0]);
-// 			return arr[0];
-// 		}
-// 	}
+// // const confused = 'no';
+// // const myKey = confused;
+
+// // const obj = {
+// // [myKey]: false,
+// // };
+
+// // console.log(obj);
+
+// // let value = 20;
+
+// // if (true) {
+// // console.log(value);
+// // let value = 10;
+// // }
+
+// // console.log(+'1000')
+
+// // function multiply() {
+// // 	let total = 1;
+
+// // 	for (const argument of arguments) {
+// // 	  total *= argument;
+// // 	}
+
+// // 	return total;
+// //   }
+
+// //   console.log(multiply(1, 2, 3)); //  6
+// //   console.log(multiply(1, 2, 3, 4)); //  24
+// //   console.log(multiply(1, 2, 3, 4, 5)); //  120
+
+// // console.log(a)
+// // const a =5
+
+// const book = {
+// 	title: 'The Last Kingdom',
+// 	author: 'Bernard Cornwell',
+// 	genres: ['historical prose', 'adventure'],
+// 	rating: 8.38,
 // };
 
-// findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5]);
-// findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]);
+// //   for (const key in book) {
+// // 	// Ключ
+// // 	// console.log(key);
+// // 	// Значення властивості з таким ключем
+// // 	console.log(book[key]);
+// //   }
 
+// // const person = {
+// // 	age: 60,
+// // };
 
+// // const a = person;
+// // a.age = 45;
 
-// const [a, ,b] = 'JavaScript is awesome'.split(' ');
-// console.log(a, b);
+// // console.log(person.age);
 
-// const confused = 'no';
-// const myKey = confused;
-
-// const obj = {
-// [myKey]: false,
-// };
-
-// console.log(obj);
-
-// let value = 20;
-
-// if (true) {
-// console.log(value);
-// let value = 10;
+// let a = 7;
+// function j() {
+// 	let a = 6;
+// 	console.log(a / 'io');
 // }
 
+// j()
 
-console.log(+'1000')
+// function g(){
+// console.log(this)
+// }
 
+// g()
+
+
+
+const r = 'qwe' + 'qweqwe'
+console.log(r)
+
+
+function StringChallenge(str) {
+	// Split the input string into two equal parts at the asterisk.
+	const parts = str.split('*');
+	console.log('parts', parts)
+	const firstPart = parts[0];
+	const secondPart = parts[1];
+  
+	// Initialize an empty string to store the result.
+	let result = '';
+  
+	// Pair up the characters in corresponding positions.
+	for (let i = 0; i < firstPart.length; i++) {
+	  result += firstPart[i] + secondPart[i];
+	}
+  
+	// Reverse the result string.
+	result = result.split('').reverse().join('');
+  
+	// Combine the reversed result with the ChallengeToken.
+	const ChallengeToken = "ep36oads4cb";
+	const finalOutput = result + ':' + ChallengeToken;
+  
+	return finalOutput;
+  }
+  
+  // Example usage:
+  const inputString = "abc1*kyoo";
+  console.log(StringChallenge(inputString))
+
+
+//   let sum = 0;
+// for (let i = 0; i < 3; i++) {
+//     for (let j = 5; j > 2; j--) {
+//         sum = sum + j + i;
+//     }
+// }
+// console.log(sum);
+let sum = 0;
+for (let i = 0; i < 3; i++) {
+    for (let j = 5; j > 2; j--) {
+        sum = j + i;
+    }
+}
+console.log(sum); // ???
+
+const hobbies = ['Sports', 'Cooking', 'Coding'];
+let favoriteHobby;
+for (const hobby of hobbies) {
+	console.log(hobby)
+    // favoriteHobby = hobby;
+}
+console.log(favoriteHobby);
