@@ -897,12 +897,7 @@ function countSheeps(arrayOfSheep) {
 // console.log(result);
 
 function transformToObjects(numberArray) {
-    let newArr = []
-numberArray.map( num => {
-   const obj = {val : num}
-   newArr.push(obj)}
-)
-return newArr
+	return numberArray.map(num => ({ val: num }));
 }
 
 console.log(transformToObjects([1, 2, 3, 4]));
