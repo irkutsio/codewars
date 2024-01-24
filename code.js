@@ -767,61 +767,142 @@ function countSheeps(arrayOfSheep) {
 
 // g()
 
+// const r = 'qwe' + 'qweqwe'
+// console.log(r)
 
+// function StringChallenge(str) {
+// 	// Split the input string into two equal parts at the asterisk.
+// 	const parts = str.split('*');
+// 	console.log('parts', parts)
+// 	const firstPart = parts[0];
+// 	const secondPart = parts[1];
 
-const r = 'qwe' + 'qweqwe'
-console.log(r)
+// 	// Initialize an empty string to store the result.
+// 	let result = '';
 
+// 	// Pair up the characters in corresponding positions.
+// 	for (let i = 0; i < firstPart.length; i++) {
+// 	  result += firstPart[i] + secondPart[i];
+// 	}
 
-function StringChallenge(str) {
-	// Split the input string into two equal parts at the asterisk.
-	const parts = str.split('*');
-	console.log('parts', parts)
-	const firstPart = parts[0];
-	const secondPart = parts[1];
-  
-	// Initialize an empty string to store the result.
-	let result = '';
-  
-	// Pair up the characters in corresponding positions.
-	for (let i = 0; i < firstPart.length; i++) {
-	  result += firstPart[i] + secondPart[i];
-	}
-  
-	// Reverse the result string.
-	result = result.split('').reverse().join('');
-  
-	// Combine the reversed result with the ChallengeToken.
-	const ChallengeToken = "ep36oads4cb";
-	const finalOutput = result + ':' + ChallengeToken;
-  
-	return finalOutput;
-  }
-  
-  // Example usage:
-  const inputString = "abc1*kyoo";
-  console.log(StringChallenge(inputString))
+// 	// Reverse the result string.
+// 	result = result.split('').reverse().join('');
 
+// 	// Combine the reversed result with the ChallengeToken.
+// 	const ChallengeToken = "ep36oads4cb";
+// 	const finalOutput = result + ':' + ChallengeToken;
 
-//   let sum = 0;
-// for (let i = 0; i < 3; i++) {
-//     for (let j = 5; j > 2; j--) {
-//         sum = sum + j + i;
-//     }
+// 	return finalOutput;
+//   }
+
+//   // Example usage:
+//   const inputString = "abc1*kyoo";
+//   console.log(StringChallenge(inputString))
+
+// //   let sum = 0;
+// // for (let i = 0; i < 3; i++) {
+// //     for (let j = 5; j > 2; j--) {
+// //         sum = sum + j + i;
+// //     }
+// // }
+// // console.log(sum);
+// // let sum = 0;
+// // for (let i = 0; i < 3; i++) {
+// //     for (let j = 5; j > 2; j--) {
+// //         sum = j + i;
+// //     }
+// // }
+// // console.log(sum); // ???
+
+// // const hobbies = ['Sports', 'Cooking', 'Coding'];
+// // let favoriteHobby;
+// // for (const hobby of hobbies) {
+// // 	console.log(hobby)
+// //     // favoriteHobby = hobby;
+// // }
+// // console.log(favoriteHobby);
+
+// // Функція для розміщення блоків у контейнері
+// function arrangeBlocks(blocks, container) {
+//     // Сортуємо блоки за зменшенням площі
+//     const sortedBlocks = blocks.slice().sort((a, b) => b.width * b.height - a.width * a.height);
+
+//     let currentX = 0;
+//     let currentY = 0;
+//     let maxYInRow = 0;
+//     let blockCoordinates = [];
+
+//     sortedBlocks.forEach((block, index) => {
+//         if (currentX + block.width <= container.width && currentY + block.height <= container.height) {
+//             // Розміщуємо блок
+//             blockCoordinates.push({
+//                 top: currentY,
+//                 left: currentX,
+//                 right: currentX + block.width,
+//                 bottom: currentY + block.height,
+//                 initialOrder: index + 1,
+//             });
+
+//             // Оновлюємо координати для наступного блоку
+//             currentX += block.width;
+//             maxYInRow = Math.max(maxYInRow, currentY + block.height);
+//         } else {
+//             // Переходимо до нового ряду
+//             currentX = 0;
+//             currentY = maxYInRow;
+//             maxYInRow = 0;
+
+//             // Повторно розміщуємо блок
+//             blockCoordinates.push({
+//                 top: currentY,
+//                 left: currentX,
+//                 right: currentX + block.width,
+//                 bottom: currentY + block.height,
+//                 initialOrder: index + 1,
+//             });
+
+//             // Оновлюємо координати для наступного блоку
+//             currentX += block.width;
+//             maxYInRow = Math.max(maxYInRow, currentY + block.height);
+//         }
+//     });
+
+//     // Обчислюємо коефіцієнт корисного простору
+//     const fullness = 1 - calculateEmptySpace(blocks, blockCoordinates);
+
+//     return {
+//         fullness,
+//         blockCoordinates,
+//     };
 // }
-// console.log(sum);
-let sum = 0;
-for (let i = 0; i < 3; i++) {
-    for (let j = 5; j > 2; j--) {
-        sum = j + i;
-    }
-}
-console.log(sum); // ???
 
-const hobbies = ['Sports', 'Cooking', 'Coding'];
-let favoriteHobby;
-for (const hobby of hobbies) {
-	console.log(hobby)
-    // favoriteHobby = hobby;
+// Функція для обчислення площі порожнини
+// function calculateEmptySpace(blocks, blockCoordinates) {
+//     const containerArea = blocks.reduce((area, block) => area + block.width * block.height, 0);
+//     const occupiedArea = blockCoordinates.reduce((area, coord) => area + (coord.right - coord.left) * (coord.bottom - coord.top), 0);
+
+//     return occupiedArea / (occupiedArea + containerArea);
+// }
+
+// Приклад використання:
+// const blocks = [
+//     { width: 90, height: 90 },
+//     { width: 60, height: 115 },
+//     // Додайте інші блоки за необхідності
+// ];
+
+// const container = { width: 350, height: 300 };
+
+// const result = arrangeBlocks(blocks, container);
+// console.log(result);
+
+function transformToObjects(numberArray) {
+    let newArr = []
+numberArray.map( num => {
+   const obj = {val : num}
+   newArr.push(obj)}
+)
+return newArr
 }
-console.log(favoriteHobby);
+
+console.log(transformToObjects([1, 2, 3, 4]));
